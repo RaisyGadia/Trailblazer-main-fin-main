@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
+
+.profile-container {
+  display: flex;
+  width: 100%;
+  font-family: "Montserrat";
+  background: transparent;
+}
+
+/* Main content wrapper adjustments */
+.profile-container .main-content-wrapper {
+  margin-left: 300px;
+  transition: margin-left 0.3s ease;
+  flex: 1;
+}
+
+.profile-container .main-content-wrapper.sidebar-collapsed {
+  margin-left: 80px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0 8rem;
+  background: transparent;
+}
+
+.profile-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Shared Page Header Styles (Copied from Dashboard.css for now) */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  width: calc(100% - 300px);
+  margin-left: -300px;
+  padding-left: calc(300px + 2rem);
+  transition: width 0.3s ease, margin-left 0.3s ease, padding-left 0.3s ease;
+}
+
+.page-header.sidebar-collapsed {
+  width: calc(100% - 80px);
+  margin-left: -80px;
+  padding-left: calc(80px + 2rem);
+}
+
+.page-header-title h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c2480;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.page-header-title .date,
+.page-header-title .subtitle {
+  color: #2e9cf4;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.profile-header-wrapper {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: none;
+  position: static;
+  width: auto;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.Pp-title {
+  margin-left: 0 !important; 
+  margin-top: 0; 
+  font-size: 22px; 
+}
+
+
+/* Profile Card */
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  margin-left: -70px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit-badge {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: #2f2785;
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.edit-icon {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+/* User Info */
+.user-info h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #243f6a;
+  margin-bottom: 5px;
+}
+
+.username,
+.gender {
+  font-size: 16px;
+  color: #5f6b7e;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+}
+.username {
+  font-style: italic;
+}
+
+/* Form Styling */
+.profile-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3rem; /* controls left-right spacing */
+  row-gap: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile-form .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.profile-form label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #243f6a;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.profile-form input:not(.country-code):not(.phone-number) {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  background-color: rgba(190, 200, 252, 0.4);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5f6b7e;
+}
+
+/* Phone input group */
+.phone-input {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(190, 200, 252, 0.4);
+}
+
+.phone-input input {
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: #5f6b7e;
+  font-weight: 500;
+}
+
+.country-code {
+  width: 60px;
+  text-align: center;
+  border-right: 2px solid #a5b4fc;
+  font-size: 18px;
+  font-weight: 600;
+  color: #243f6a;
+  pointer-events: none;
+}
+
+/* Save Button */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.form-actions button {
+  background-color: #2f2785;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-actions button:hover {
+  background-color: #1f1a66;
+}

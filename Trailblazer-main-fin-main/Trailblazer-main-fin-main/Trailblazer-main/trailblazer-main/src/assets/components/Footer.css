@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+footer {
+  color: white;
+  background-color: #2f2785;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: clamp(20px, 4vw, 50px) clamp(15px, 3vw, 60px);
+  text-align: left;
+  margin-top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  flex-shrink: 0;
+  min-width: fit-content;
+  max-width: none;
+  height: auto;
+}
+
+.footer-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: clamp(60px, 10vw, 121px);
+  height: clamp(60px, 10vw, 121px);
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  flex-shrink: 1;
+  white-space: nowrap;
+  margin-left: -10px;
+}
+
+.footer-title {
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    #326bf6 9%,
+    #90caf9 21%,
+    #90caf9 42%,
+    #a3a8f9 58%,
+    #c2aefd 76%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+  white-space: nowrap;
+}
+
+.footer-subtext {
+  font-size: clamp(10px, 2vw, 18px);
+  font-weight: 600;
+  background: linear-gradient(to right, #2d9cf4 0%, #90caf9 49%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 0.8;
+  letter-spacing: clamp(1px, 0.5vw, 2.5px);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.footer-headings {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(25px, 4vw, 50px);
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 0;
+}
+
+.footer-headings > div {
+  flex: 0 0 auto;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+.footer-headings h2 {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+}
+
+.footer-headings p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.terms-and-privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.terms-and-privacy a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: clamp(16px, 2vw, 20px);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.terms-and-privacy a:hover {
+  text-decoration: underline;
+}
+
+/* Large screens - ensure better wrapping behavior */
+@media screen and (min-width: 1200px) {
+  footer {
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-headings {
+    gap: 60px;
+    flex-wrap: nowrap;
+  }
+}
+
+/* Medium to large screens - fix overlap issue */
+@media screen and (max-width: 1421px) and (min-width: 1201px) {
+  footer {
+    gap: 40px;
+    padding: clamp(20px, 4vw, 50px) clamp(30px, 4vw, 80px);
+  }
+
+  .footer-brand-container {
+    max-width: 300px;
+    flex-shrink: 1;
+  }
+
+  .footer-headings {
+    gap: clamp(20px, 3vw, 40px);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .footer-headings > div {
+    min-width: 120px;
+    max-width: 160px;
+  }
+}
+
+/* Medium to large screens */
+@media screen and (max-width: 1199px) and (min-width: 993px) {
+  footer {
+    gap: 25px;
+  }
+
+  .footer-headings {
+    gap: 35px;
+  }
+
+  .footer-headings > div {
+    min-width: 140px;
+    max-width: 180px;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  footer {
+    padding: 30px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-brand-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-headings {
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .address,
+  .contact,
+  .hours,
+  .terms-and-privacy {
+    min-width: 160px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .footer-headings h2,
+  .footer-headings p {
+    text-align: center;
+  }
+
+  .terms-and-privacy a {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .footer-brand-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+  }
+
+  .footer-text {
+    align-items: center;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .footer-headings {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .footer-headings h2,
+  .footer-headings p {
+    text-align: center;
+  }
+
+  .terms-and-privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .terms-and-privacy a {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer {
+    padding: 20px 10px;
+    gap: 18px;
+  }
+
+  .footer-headings {
+    gap: 20px;
+  }
+
+  .footer-headings > div {
+    min-width: 120px;
+    max-width: 250px;
+  }
+}

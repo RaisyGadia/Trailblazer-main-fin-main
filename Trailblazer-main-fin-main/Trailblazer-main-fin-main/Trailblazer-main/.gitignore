@@ -1,0 +1,83 @@
+# Dependency directories
+node_modules/
+
+# Build output
+build/
+dist/
+dist-ssr/
+out/
+# .next/ # Uncomment if using Next.js
+# .nuxt/ # Uncomment if using Nuxt.js
+# public/ # Uncomment if using Gatsby and it's a build output
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+*.seed
+
+# Local environment variables
+# IMPORTANT: Never commit .env files containing secrets.
+# Only commit .env.example or .env.template files.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+!.env.template
+
+# Coverage directory
+coverage/
+.nyc_output/
+*.lcov
+
+# IDE / Editor specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.project
+.classpath
+.c9/
+*.launch
+.sublimelinterrc
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Optional files
+.npmrc
+*.tgz
+*.zip
+
+# Compiled binary files (if any, e.g. from native addons)
+# *.node
+# *.dll
+# *.exe
+# *.so
+# *.dylib 

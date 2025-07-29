@@ -1,0 +1,257 @@
+.da-wrapper {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 0 20px 50px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+.da-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 65px;
+}
+
+.da-step-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.da-step-line {
+  width: clamp(40px, 8vw, 100px);
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.da-step-line.active {
+  background-color: #2e2684;
+}
+
+.da-step-circle {
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #243f6a;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.da-step-circle.active {
+  background-color: #2e2684;
+}
+
+.da-step-num {
+  font-weight: bold;
+  font-size: clamp(18px, 3vw, 32px);
+  color: #2e2684;
+  font-family: "Montserrat";
+}
+
+.da-step-circle.active .da-step-num {
+  color: white;
+}
+
+.da-step-labels {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: clamp(5px, 3vw, 35px);
+  margin-bottom: 45px;
+}
+
+.da-step-label {
+  font-family: "Montserrat";
+  width: clamp(60px, 15vw, 131px);
+  font-weight: 500;
+  font-size: clamp(14px, 2vw, 20px);
+  color: black;
+  text-align: center;
+}
+
+.da-heading {
+  text-align: center;
+  color: #2e2684;
+  font-weight: bold;
+  font-size: clamp(24px, 4vw, 38px);
+  margin: 20px 0 40px;
+  width: 100%;
+}
+
+.da-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.da-card {
+  width: 100%;
+  max-width: 632px;
+  min-width: 280px;
+  height: auto;
+  min-height: 300px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.da-card-header {
+  padding: 15px 24px;
+  border-bottom: 1px solid #bcc3cd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.da-card-header h2 {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+}
+
+.da-edit-icon {
+  width: clamp(30px, 5vw, 49px);
+  height: auto;
+  cursor: pointer;
+}
+
+.da-card-body {
+  padding: 24px;
+  color: black;
+}
+
+.da-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.da-label {
+  font-weight: 600;
+  color: #5f6b7e;
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin-right: 10px;
+}
+
+.da-value {
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.da-value.bold {
+  font-weight: bold;
+}
+
+.da-input {
+  font-size: clamp(16px, 2.5vw, 22px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: clamp(120px, 40%, 200px);
+}
+
+.da-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.da-btn-outline {
+  width: clamp(150px, 30vw, 225px);
+  height: clamp(45px, 8vh, 57px);
+  font-weight: bold;
+  font-size: clamp(16px, 2vw, 22px);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-family: "Montserrat";
+  color: #2196f3;
+  background: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.da-btn-primary {
+  width: clamp(150px, 30vw, 225px);
+  height: clamp(45px, 8vh, 57px);
+  font-weight: bold;
+  font-size: clamp(16px, 2vw, 22px);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-family: "Montserrat";
+  border: none;
+  background: #2196f3;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.da-btn-outline:hover,
+.da-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for better responsiveness */
+@media screen and (max-width: 768px) {
+  .da-wrapper {
+    margin-top: 60px;
+  }
+  
+  .da-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .da-input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .da-step-circles {
+    gap: 5px;
+  }
+  
+  .da-step-line {
+    width: clamp(20px, 5vw, 40px);
+  }
+  
+  .da-cards {
+    gap: 15px;
+  }
+  
+  .da-card-body {
+    padding: 15px;
+  }
+}

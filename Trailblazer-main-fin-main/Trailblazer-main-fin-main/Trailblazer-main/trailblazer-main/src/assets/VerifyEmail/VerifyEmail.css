@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+.fp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom,
+    #e8ecf6 26%,
+    #bec8fc 52%,
+    #bec8fc 61%,
+    #c2aefd 100%
+  );
+  padding-top: 50px;
+}
+
+.fp-logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  width: 384;
+  height: 83px;
+  margin-left: 10px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.fp-logo-img {
+  width: 121px;
+  height: 121px;
+  margin-left: 50px;
+  margin-top: 0;
+}
+
+.fp-brand-text {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    #326bf6 9%,
+    #90caf9 21%,
+    #90caf9 42%,
+    #a3a8f9 58%,
+    #c2aefd 76%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -30px;
+  padding: 0;
+  line-height: 0.8;
+}
+
+.fp-sub-text {
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background: linear-gradient(to right, #2d9cf4 0%, #90caf9 49%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 0;
+  padding: 0;
+  line-height: 0.8;
+}
+
+.fp-card {
+  padding: 40px;
+  border-radius: 20px;
+  width: 560;
+  height: 580;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  margin-top: 50px;
+}
+
+.fp-card-title {
+  font-size: 36px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #243f6a;
+}
+
+.fp-card-title {
+  font-size: 36px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #243f6a;
+}
+
+.fp-icon {
+  position: relative;
+  font-size: 80px;
+  color: #2f2785;
+}
+
+.fp-description {
+  text-align: center;
+  color: #243f6a;
+  margin-bottom: 40px;
+  width: 308px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fp-submit-btn-container {
+  text-align: center;
+}
+
+.fp-submit-btn {
+  background-color: #2f2785;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  width: 135px;
+  height: 44px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fp-submit-btn:hover,
+.fp-submit-btn:focus {
+  background-color: #3730a3;
+  outline: none;
+  border: none;
+}
+
+/* Code Input Styles */
+.fp-code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.fp-code-input {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  text-align: center;
+  border: 2px solid #d2d2f0;
+  border-radius: 20px;
+  outline: none;
+  background-color: #fff;
+  color: #2f2785;
+  font-weight: bold;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.fp-code-input:focus {
+  border-color: #7c4dff;
+  box-shadow: 0 0 8px rgba(124, 77, 255, 0.3);
+}
+
+.fp-resend {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  color: #2f2785;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.fp-resend a {
+  color: #d43f3f;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.fp-resend a:hover {
+  text-decoration: underline;
+}
+.fp-timer {
+  text-align: left;
+  margin-top: 10px;
+}
+/* Password Reset Section */
+
+.fp-password-container {
+  width: 560;
+  height: 580;
+}
+.fp-password-input {
+  display: flex;
+  flex: column;
+  width: 420px;
+  height: 51;
+  font-size: 16px;
+  padding: 15px 15px;
+  margin-bottom: 10px;
+  border: 2px solid #d2d2f0;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #2f2785;
+  font-weight: 500;
+  outline: none;
+  margin-left: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.fp-password-input:focus {
+  border-color: #7c4dff;
+  box-shadow: 0 0 8px rgba(124, 77, 255, 0.3);
+}
+
+.fp-password-note {
+  font-size: 11px;
+  font-weight: 400;
+  color: #2f2785;
+  text-align: left;
+  margin-left: -50px;
+}
+.check-icon {
+  width: 100px;
+  height: 100px;
+  color: #2f2785;
+}
+.updated-password-container {
+  width: 560;
+  height: 580;
+}
+.fp-login-btn {
+  background-color: #326bf6;
+  color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}

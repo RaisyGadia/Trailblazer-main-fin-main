@@ -1,0 +1,584 @@
+.pay-wrapper {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding: 0 20px 50px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 130px;
+  align-items: center;
+}
+
+.pay-receipt-section {
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.pay-gcash-box {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.pay-qr-img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.pay-number {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.pay-upload-label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.pay-receipt-preview {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.pay-receipt-image {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.pay-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+  width: 100%;
+}
+
+.pay-step-circles {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pay-line {
+  width: clamp(50px, 10vw, 100px);
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.pay-line.active {
+  background-color: #2e2684;
+}
+
+.pay-step-circle {
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #243f6a;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.pay-step-circle.active {
+  background-color: #2e2684;
+}
+
+.pay-step-num {
+  font-weight: bold;
+  font-size: clamp(20px, 4vw, 32px);
+  color: #2e2684;
+  font-family: "Montserrat";
+}
+
+.pay-step-circle.active .pay-step-num {
+  color: white;
+}
+
+.pay-step-labels {
+  display: flex;
+  gap: clamp(15px, 3vw, 34px);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+.pay-step-label {
+  font-family: "Montserrat";
+  width: clamp(90px, 12vw, 131px);
+  font-weight: 500;
+  font-size: clamp(14px, 2vw, 20px);
+  color: black;
+  text-align: center;
+}
+
+.pay-title {
+  text-align: center;
+  font-size: clamp(24px, 4vw, 32px);
+  color: #2e2684;
+  font-weight: bold;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.pay-card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pay-doc-preview {
+  width: 30%;
+  min-width: 250px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.pay-template-image {
+  width: 100%;
+  max-width: 240px;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.pay-doc-info {
+  width: 100%;
+  max-width: 180px;
+  text-align: left;
+}
+
+.pay-doc-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.pay-doc-detail {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.pay-info {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-bottom: 8px;
+  padding: 4px 0;
+  color: #000;
+}
+
+.pay-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.pay-value {
+  font-weight: 500;
+  text-align: right;
+}
+
+.pay-breakdown {
+  margin-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 15px;
+  color: #000;
+}
+
+.pay-separator {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.pay-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+.pay-terms {
+  display: flex;
+  align-items: left;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.pay-terms input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.pay-terms label {
+  font-size: 14px;
+  color: #333;
+}
+
+.pay-link {
+  color: #2196f3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pay-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.pay-btn-filled {
+  width: clamp(120px, 20vw, 180px);
+  height: clamp(40px, 6vh, 50px);
+  border-radius: 20px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600;
+  font-family: "Montserrat";
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  background: #2196f3;
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.pay-btn-filled:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pay-btn-filled:disabled {
+  background: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.pay-btn-outline {
+  width: clamp(120px, 20vw, 180px);
+  height: clamp(40px, 6vh, 50px);
+  border-radius: 20px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600;
+  font-family: "Montserrat";
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background: white;
+  border: 2px solid #2196f3;
+  color: #2196f3;
+  transition: all 0.3s ease;
+}
+
+.pay-btn-outline:hover {
+  background: #f5f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .pay-wrapper {
+    margin-top: 100px;
+  }
+  
+  .pay-card {
+    flex-direction: column;
+  }
+  
+  .pay-doc-preview {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+  }
+  
+  .pay-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .pay-btn-outline, .pay-btn-filled {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pay-wrapper {
+    margin-top: 80px;
+    padding: 0 15px 30px;
+  }
+  
+  .pay-row {
+    font-size: 14px;
+  }
+  
+  .pay-total {
+    font-size: 16px;
+  }
+}
+
+.pay-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.pay-modal {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.pay-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #2e2684;
+  color: white;
+  text-align: left;
+}
+
+.pay-modal-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.pay-modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.pay-modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pay-modal-content {
+  padding: 0;
+  overflow-y: auto;
+  max-height: 85vh;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pay-terms-title {
+  margin: 0;
+  padding: 16px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  background-color: #ffffff;
+  color: #000;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-terms-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.pay-terms-close:hover {
+  color: #333;
+}
+
+.pay-terms-container {
+  padding: 5px 20px 20px;
+  overflow-y: auto;
+  height: 350px;
+  color: #888686;
+}
+
+.pay-terms-intro {
+  margin: 10px 0 15px;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pay-terms-section {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.pay-terms-label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.pay-terms-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.pay-terms-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 12px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eaeaea;
+  gap: 70px;
+}
+
+.pay-terms-decline, 
+.pay-terms-accept {
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.pay-terms-decline {
+  background-color: #fff;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+}
+
+.pay-terms-decline:hover {
+  background-color: #f1f1f1;
+  border-color: #2196F3;
+}
+
+.pay-terms-accept {
+  background-color: #2196f3;
+  color: white;
+}
+
+.pay-terms-accept:hover {
+  background-color: #1976d2;
+}
+
+@media screen and (max-width: 768px) {
+  .pay-modal {
+    max-width: 90%;
+    max-height: 80vh;
+  }
+  
+  .pay-terms-container {
+    height: 300px;
+  }
+  
+  .pay-terms-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pay-modal {
+    max-width: 95%;
+    max-height: 85vh;
+  }
+  
+  .pay-terms-container {
+    height: 280px;
+    padding: 5px 15px 15px;
+  }
+  
+  .pay-terms-title {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+  
+  .pay-terms-buttons {
+    padding: 10px 15px;
+  }
+  
+  .pay-terms-decline, 
+  .pay-terms-accept {
+    padding: 6px 18px;
+    font-size: 13px;
+  }
+}

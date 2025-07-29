@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.services {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to bottom, #e8ecf6 0%, #bec8fc 32%, #bec8fc 64%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: #2f2785;
+  margin-top: 60px;
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 0.8;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(200px, 4vw, 100px);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+}
+
+.printing-container,
+.layout-container {
+  flex: 1;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  min-height: 320px;
+  background: linear-gradient(to bottom, #e8ecf7 15%, #fef9f6 40%);
+  border: none;
+  padding: 20px 10px;
+  margin-top: 55px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.printer,
+.layouting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.printer img,
+.layouting img {
+  width: clamp(80px, 10vw, 128px);
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.printing-container:hover,
+.layout-container:hover {
+  transform: scale(1.05);
+}
+
+.printing-container:active,
+.layout-container:active {
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.printing,
+.layout {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 700;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.subtext1,
+.subtext2 {
+  text-align: center;
+  font-size: clamp(16px, 2.5vw, 24px);
+  font-weight: 400;
+  color: black;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.Rhombus-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rhombus1 {
+  width: clamp(120px, 20vw, 300px);
+  height: clamp(120px, 20vw, 300px);
+  background-color: black;
+  border-radius: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  margin-top: -10vw; /* Half of height to center vertically */
+  animation: spinAndColor 1.7s linear infinite;
+}
+
+.rhombus2 {
+  width: clamp(120px, 20vw, 300px);
+  height: clamp(120px, 20vw, 300px);
+  background-color: #326bf6;
+  border-radius: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  margin-top: -10vw; /* Half of height to center vertically */
+  animation: spinAndColor 1.7s linear infinite reverse;
+}
+
+@keyframes spinAndColor {
+  0% {
+    transform: rotate(0deg);
+    background: #2f2785;
+    border: none;
+  }
+  25% {
+    transform: rotate(90deg);
+    background: #326bf6;
+    border: none;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #2f2785;
+    border: none;
+  }
+  75% {
+    transform: rotate(270deg);
+    background: #326bf6;
+    border: none;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #2f2785;
+    border: none;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  .rhombus1,
+  .rhombus2 {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 10px 15px;
+  }
+
+  .services-container {
+    gap: 20px;
+  }
+
+  .printing-container,
+  .layout-container {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .rhombus1 {
+    left: -15%;
+    margin-top: -15vw;
+  }
+
+  .rhombus2 {
+    right: -15%;
+    margin-top: -15vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .printing-container,
+  .layout-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    margin-top: 40px;
+  }
+
+  .printing-container,
+  .layout-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    min-height: 300px;
+  }
+
+  .rhombus1,
+  .rhombus2 {
+    opacity: 0.3;
+    width: clamp(100px, 25vw, 150px);
+    height: clamp(100px, 25vw, 150px);
+    margin-top: -12.5vw;
+  }
+}

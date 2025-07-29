@@ -1,0 +1,103 @@
+/* ------------------------------ */
+/* AdminOrderHistory.css         */
+/* ------------------------------ */
+
+/* ⛳ Tabs Section */
+.aoh-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 12px;
+  flex-shrink: 0;
+}
+
+.aoh-tab-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #999;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.aoh-tab-btn:hover {
+  color: #1c7ed6;
+}
+
+.aoh-tab-btn.active {
+  color: #1c7ed6;
+  font-weight: 600;
+  border-bottom: 3px solid #1c7ed6;
+}
+
+/* ✅ Empty Message Fallback */
+.aoh-empty-message {
+  text-align: center;
+  padding: 60px 24px;
+  font-size: 18px;
+  color: #888;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📦 Main Content Container */
+.aoh-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+/* 🖥 Responsive Tabs */
+@media (max-width: 768px) {
+  .aoh-tabs {
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .aoh-tab-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .aoh-empty-message {
+    padding: 32px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aoh-tabs {
+    margin-bottom: 16px;
+  }
+
+  .aoh-tab-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .aoh-empty-message {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
+
+/* 🧠 Table Row Highlight (already used in admin dashboard) */
+.alt-row {
+  background-color: #f7f9fc;
+}
+
+
+/* ✅ Optional - override sidebar icons if needed */
+.ad-sidebar .ad-nav-item .aoh-icon {
+  /* leave empty for now unless you need different styling for History icon */
+}

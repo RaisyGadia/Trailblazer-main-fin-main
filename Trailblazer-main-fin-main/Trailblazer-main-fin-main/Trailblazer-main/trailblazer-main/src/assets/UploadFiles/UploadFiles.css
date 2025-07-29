@@ -1,0 +1,1089 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.uf-container {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-top: 130px;
+  min-height: calc(100vh - 130px);
+}
+
+.uf-wrapper {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.uf-bg {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    #e4eaf7 0%,
+    #fef9f6 35%,
+    #fef9f6 69%,
+    #e4eaf7 100%
+  );
+}
+
+.uf-btn-outline {
+  background-color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #234479;
+  padding: 0.75rem 2rem;
+  font-family: "Montserrat";
+}
+
+.uf-main {
+  padding: 0 clamp(1rem, 2.5vw, 2.5rem) clamp(2rem, 4vw, 4rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.uf-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uf-step-circles {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.uf-line {
+  width: clamp(50px, 10vw, 100px);
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.uf-line.active {
+  background-color: #2e2684;
+}
+
+.uf-step-circle {
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #243f6a;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.uf-step-circle.active {
+  background-color: #2e2684;
+}
+
+.uf-step-num {
+  font-weight: bold;
+  font-size: clamp(20px, 4vw, 32px);
+  color: #2e2684;
+  font-family: "Montserrat";
+}
+
+.uf-step-circle.active .uf-step-num {
+  color: white;
+}
+
+.uf-step-labels {
+  display: flex;
+  gap: clamp(15px, 3vw, 30px);
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.uf-step-label {
+  font-family: "Montserrat";
+  width: clamp(90px, 12vw, 131px);
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+  color: black;
+  text-align: center;
+}
+
+.uf-title {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: clamp(28px, 5vw, 48px);
+  color: #2f2785;
+  text-align: left;
+  margin-left: 75px;
+}
+
+.uf-subtitle {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: clamp(16px, 3vw, 24px);
+  color: #5f6b7e;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 75px;
+}
+
+.uf-content {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  min-height: max(600px, 40vh);
+  align-items: stretch;
+  position: relative;
+  overflow: visible;
+  max-height: none;
+}
+
+.uf-upload-box {
+  flex: 1.5;
+  background-color: white;
+  border: 2px dashed #5f6b7e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-height: max(600px, 40vh);
+  height: auto;
+  padding: 2rem;
+  transition: background-color 0.5s ease;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.uf-upload-box.transparent {
+  background-color: transparent;
+}
+
+.uf-upload-box.has-files {
+  background-color: transparent;
+}
+
+.uf-upload-icon {
+  width: 212px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+}
+
+.uf-upload-text {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #5f6b7e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.uf-btn-browse {
+  background-color: #2196f3;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: clamp(200px, 80%, 369px);
+  height: auto;
+  min-height: 50px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: clamp(18px, 4vw, 32px);
+  color: white;
+  border-style: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 10px 2rem;
+}
+
+.uf-btn-browse:hover {
+  background-color: #362d92;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.uf-card {
+  flex: 1;
+  width: 100%;
+  max-width: 447px;
+  background: linear-gradient(to bottom, #e8ecf7 0%, #fef9f6 27%);
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: max(600px, 40vh);
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.uf-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.uf-card-title {
+  font-weight: bold;
+  font-size: clamp(18px, 3vw, 24px);
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.uf-specs {
+  margin-top: 15px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  max-height: calc(100% - 200px);
+}
+
+.uf-spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uf-spec-label {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 16px);
+  color: black;
+  margin-bottom: 5px;
+}
+
+.uf-spec-trigger {
+  width: 100%;
+  max-width: 255px;
+  height: 44px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-weight: normal;
+  font-size: 12px;
+  color: black;
+}
+
+.uf-payment-section {
+  width: 100%;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.uf-payment-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.uf-payment-label {
+  font-weight: bold;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: black;
+  margin-right: 120px;
+}
+
+.uf-payment-amount {
+  display: flex;
+  align-items: center;
+}
+
+.uf-payment-icon {
+  width: clamp(20px, 3vw, 29px);
+  height: auto;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+.uf-payment-value {
+  font-weight: 600;
+  font-size: clamp(18px, 3vw, 25px);
+  color: black;
+  font-family: "Montserrat";
+}
+
+.uf-confirm-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uf-btn-primary {
+  background-color: #1981e4;
+  color: white;
+  font-weight: bold;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  font-family: "Montserrat";
+}
+
+.uf-btn-primary:hover {
+  background-color: #1467b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.uf-proceed-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.uf-btn-proceed {
+  background-color: #2f2785;
+  color: white;
+  font-weight: bold;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  font-family: "Montserrat";
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+}
+
+.uf-btn-proceed:hover {
+  background-color: #241f68;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.uf-btn-proceed:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.uf-file-preview {
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: none;
+  width: 100%;
+  max-width: 587px;
+  height: auto;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.uf-preview-title {
+  font-family: "Montserrat";
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: bold;
+  color: #000000;
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.uf-close-preview {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  font-size: clamp(30px, 4vw, 40px);
+  color: #000000;
+  cursor: pointer;
+  font-weight: 300;
+  transition: color 0.2s ease;
+  line-height: 0.5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  z-index: 5;
+}
+
+.uf-close-preview:hover {
+  color: #2e2684;
+}
+
+.uf-accepted-label {
+  font-family: "Montserrat";
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #000000;
+  margin-top: clamp(30px, 5vh, 52.71px);
+}
+
+.uf-file-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.uf-file-icons img {
+  width: clamp(30px, 5vw, 45px);
+  height: auto;
+  object-fit: contain;
+}
+
+.uf-files-list {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.uf-file-item {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+.uf-file-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.uf-page-count-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #000;
+}
+
+.uf-page-input {
+  width: 60px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  text-align: center;
+}
+
+.uf-page-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 4px rgba(33, 150, 243, 0.3);
+}
+
+.uf-remove-file {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ff4d4f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.uf-remove-file:hover {
+  background-color: #ff7875;
+  transform: scale(1.15);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.uf-btn-add-more {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.uf-btn-add-more:hover {
+  background-color: #0d8bf2;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.uf-progress-bar-wrapper {
+  width: 100%;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.uf-progress-bar {
+  height: 100%;
+  background-color: #2196f3;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: width 0.3s ease;
+}
+
+.uf-file-specs {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.uf-file-spec-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.uf-file-spec {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.uf-file-spec label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2e2684;
+  margin-bottom: 5px;
+}
+
+.uf-file-spec-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.uf-file-spec-select:focus {
+  outline: none;
+  border-color: #2e2684;
+  box-shadow: 0 0 0 2px rgba(46, 38, 132, 0.1);
+}
+
+.uf-file-spec-select:hover {
+  border-color: #2e2684;
+}
+
+.uf-spec-input {
+  width: 100%;
+  max-width: 255px;
+  height: 44px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-weight: normal;
+  font-size: 12px;
+  color: black;
+  padding: 0 12px;
+  font-family: "Montserrat";
+}
+
+.uf-spec-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 4px rgba(33, 150, 243, 0.3);
+}
+
+.uf-template-info {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.uf-template-info h3 {
+  color: #2f2785;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.uf-template-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.uf-template-notes {
+  margin-top: 10px;
+}
+
+.uf-template-notes h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.uf-template-notes p {
+  font-style: italic;
+  color: #666;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 992px) {
+  .uf-content {
+    gap: 2rem;
+    flex-direction: row;
+    align-items: stretch;
+    max-height: none;
+    min-height: 500px;
+  }
+
+  .uf-card {
+    margin-top: 0;
+    min-height: 500px;
+    height: auto;
+  }
+
+  .uf-upload-box {
+    min-height: 500px;
+    height: auto;
+  }
+
+  .uf-card-content {
+    height: 100%;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .uf-specs {
+    max-height: calc(100% - 180px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .uf-container {
+    margin-top: 100px;
+    margin-left: 0;
+  }
+
+  .uf-main {
+    padding: 0 1rem 2rem;
+  }
+
+  .uf-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: auto;
+    align-items: stretch;
+    max-height: none;
+  }
+
+  .uf-upload-box {
+    max-width: 100%;
+    min-height: 400px;
+    height: auto;
+    flex: none;
+  }
+
+  .uf-card {
+    max-width: 100%;
+    min-height: 400px;
+    height: auto;
+    flex: none;
+  }
+
+  .uf-card-content {
+    height: auto;
+    min-height: 0;
+    padding: 1rem;
+    overflow: visible;
+  }
+
+  .uf-specs {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .uf-step-circles {
+    gap: 10px;
+  }
+
+  .uf-line {
+    width: clamp(30px, 8vw, 50px);
+  }
+
+  .uf-files-list {
+    max-height: 200px;
+  }
+
+  .uf-file-item {
+    margin-bottom: 12px;
+  }
+
+  .uf-progress-bar {
+    font-size: 12px;
+  }
+
+  .uf-payment-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .uf-payment-label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .uf-payment-value {
+    font-size: clamp(16px, 2.5vw, 22px);
+  }
+
+  .uf-payment-icon {
+    width: clamp(18px, 2.5vw, 25px);
+  }
+
+  .uf-confirm-btn-wrapper {
+    justify-content: center;
+  }
+
+  .uf-btn-primary {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .uf-container {
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+
+  .uf-content {
+    flex-direction: column;
+    gap: 1rem;
+    min-height: auto;
+    align-items: stretch;
+    max-height: none;
+  }
+
+  .uf-upload-box {
+    min-height: 350px;
+    height: auto;
+    padding: 1.5rem;
+    flex: none;
+  }
+
+  .uf-card {
+    min-height: 350px;
+    height: auto;
+    flex: none;
+  }
+
+  .uf-card-content {
+    padding: 1rem;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .uf-specs {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .uf-title {
+    text-align: center;
+    margin-left: 0;
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .uf-subtitle {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .uf-card-title {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .uf-spec-trigger,
+  .uf-spec-input {
+    max-width: 100%;
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .uf-payment-label {
+    font-size: clamp(12px, 3vw, 16px);
+    margin-bottom: 0.25rem;
+  }
+
+  .uf-payment-value {
+    font-size: clamp(14px, 3.5vw, 20px);
+  }
+
+  .uf-payment-icon {
+    width: clamp(16px, 3vw, 22px);
+  }
+
+  .uf-confirm-btn-wrapper {
+    padding: 0 10px 10px;
+    justify-content: center;
+  }
+
+  .uf-btn-primary {
+    width: clamp(120px, 60%, 200px);
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .uf-files-list {
+    max-height: 180px;
+  }
+
+  .uf-btn-add-more {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Back button responsive styles moved to shared BackButton component */
+}
+
+@media screen and (min-width: 1200px) {
+  .uf-upload-text {
+    font-size: 2.25rem;
+    line-height: 1.3;
+  }
+
+  .uf-upload-icon {
+    width: 250px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .uf-upload-box {
+    min-height: 650px;
+    max-width: 65%;
+    height: auto;
+  }
+
+  .uf-btn-browse {
+    font-size: 32px;
+    padding: 15px 3rem;
+    margin-top: 1rem;
+  }
+
+  .uf-content {
+    min-height: 650px;
+    gap: 3rem;
+    align-items: stretch;
+    max-height: none;
+  }
+
+  .uf-card {
+    height: auto;
+    min-height: 650px;
+  }
+
+  .uf-card-content {
+    height: 100%;
+    padding: 2rem;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .uf-specs {
+    max-height: calc(100% - 220px);
+  }
+
+  .uf-card-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  .uf-specs {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .uf-upload-box {
+    min-height: 750px;
+    height: auto;
+  }
+
+  .uf-card {
+    height: auto;
+    min-height: 750px;
+  }
+
+  .uf-card-content {
+    height: 100%;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .uf-specs {
+    max-height: calc(100% - 240px);
+  }
+
+  .uf-content {
+    min-height: 750px;
+    align-items: stretch;
+    max-height: none;
+  }
+
+  .uf-upload-icon {
+    width: 300px;
+  }
+
+  .uf-upload-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Back button styles moved to shared BackButton component */
+
+/* Add zoom responsiveness and consistent height rules */
+@media screen and (min-resolution: 1.25dppx) {
+  .uf-upload-box,
+  .uf-card {
+    min-height: calc(max(600px, 40vh) / 1.25);
+  }
+
+  .uf-content {
+    min-height: calc(max(600px, 40vh) / 1.25);
+  }
+}
+
+@media screen and (min-resolution: 1.5dppx) {
+  .uf-upload-box,
+  .uf-card {
+    min-height: calc(max(600px, 40vh) / 1.5);
+  }
+
+  .uf-content {
+    min-height: calc(max(600px, 40vh) / 1.5);
+  }
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .uf-upload-box,
+  .uf-card {
+    min-height: calc(max(600px, 40vh) / 2);
+  }
+
+  .uf-content {
+    min-height: calc(max(600px, 40vh) / 2);
+  }
+}
+
+/* Zoom level adjustments using CSS zoom detection */
+@media screen and (-webkit-min-device-pixel-ratio: 1.1) {
+  .uf-content {
+    min-height: 55vh;
+  }
+
+  .uf-upload-box,
+  .uf-card {
+    min-height: 55vh;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.25) {
+  .uf-content {
+    min-height: 50vh;
+  }
+
+  .uf-upload-box,
+  .uf-card {
+    min-height: 50vh;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .uf-content {
+    min-height: 45vh;
+  }
+
+  .uf-upload-box,
+  .uf-card {
+    min-height: 45vh;
+  }
+}

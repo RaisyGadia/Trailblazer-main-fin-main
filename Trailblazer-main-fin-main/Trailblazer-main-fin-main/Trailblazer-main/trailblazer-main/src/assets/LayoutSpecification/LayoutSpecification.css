@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.uf-container {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-top: 130px;
+  min-height: calc(100vh - 130px);
+}
+
+.uf-wrapper {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.uf-bg {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    #e4eaf7 0%,
+    #fef9f6 35%,
+    #fef9f6 69%,
+    #e4eaf7 100%
+  );
+}
+
+.uf-btn-outline {
+  background-color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #234479;
+  padding: 0.75rem 2rem;
+  font-family: "Montserrat";
+}
+
+.uf-main {
+  padding: 0 clamp(1rem, 2.5vw, 2.5rem) clamp(2rem, 4vw, 4rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.uf-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.uf-step-circles {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.uf-line {
+  width: clamp(50px, 10vw, 100px);
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.uf-line.active {
+  background-color: #2e2684;
+}
+
+.uf-step-circle {
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #243f6a;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.uf-step-circle.active {
+  background-color: #2e2684;
+}
+
+.uf-step-num {
+  font-weight: bold;
+  font-size: clamp(20px, 4vw, 32px);
+  color: #2e2684;
+  font-family: "Montserrat";
+}
+
+.uf-step-circle.active .uf-step-num {
+  color: white;
+}
+
+.uf-step-labels {
+  display: flex;
+  gap: clamp(15px, 3vw, 30px);
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.uf-step-label {
+  font-family: "Montserrat";
+  width: clamp(90px, 12vw, 131px);
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+  color: black;
+  text-align: center;
+}
+
+.uf-title {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: clamp(28px, 5vw, 48px);
+  color: #2f2785;
+  text-align: left;
+  margin-left: 75px;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.uf-subtitle {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: clamp(16px, 3vw, 24px);
+  color: #5f6b7e;
+  margin-bottom: 30px;
+  text-align: left;
+  margin-left: 75px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.uf-content {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.uf-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.uf-card-content {
+  padding: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.uf-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2f2785;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.uf-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.uf-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uf-spec-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f2785;
+  margin: 0;
+}
+
+.uf-spec-trigger {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+.uf-payment-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.uf-payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.uf-payment-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f2785;
+  margin: 0;
+}
+
+.uf-payment-amount {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.uf-payment-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.uf-payment-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2f2785;
+}
+
+.uf-confirm-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uf-btn-primary {
+  background-color: #1981e4;
+  color: white;
+  font-weight: bold;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  font-family: "Montserrat";
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.uf-btn-primary:hover {
+  background-color: #1467b3;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.uf-proceed-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.uf-btn-proceed {
+  background-color: #2f2785;
+  color: white;
+  font-weight: bold;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  font-family: "Montserrat";
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+}
+
+.uf-btn-proceed:hover {
+  background-color: #241f68;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.uf-spec-input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.uf-spec-input:focus {
+  border-color: #2f2785;
+  box-shadow: 0 0 0 2px rgba(47, 39, 133, 0.2);
+}
+
+.uf-file-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.uf-file-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Back button styles moved to shared BackButton component */
+
+.uf-payment-note {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 992px) {
+  .uf-content {
+    flex-direction: column;
+  }
+  .uf-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .uf-container {
+    padding: 0 15px;
+  }
+  .uf-main {
+    padding: 0 1rem 1.5rem;
+  }
+  .uf-title {
+    margin-left: 20px;
+    font-size: 32px;
+  }
+  .uf-subtitle {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  .uf-payment-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .uf-confirm-btn-wrapper {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .uf-container {
+    padding: 0 10px;
+  }
+  .uf-title {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .uf-subtitle {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .uf-card-title {
+    font-size: 20px;
+  }
+  .uf-card-content {
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+  .uf-btn-primary {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .uf-file-icons {
+    gap: 10px;
+  }
+  .uf-step-labels {
+    gap: 10px;
+  }
+  .uf-line {
+    width: 30px;
+  }
+}

@@ -1,0 +1,85 @@
+/* Import Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+.terms-container {
+  padding: 30px;
+  background-color: #fff;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Tabs */
+.terms-privacy-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-header {
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #777;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-header:hover {
+  color: #1b3b6f;
+}
+
+.tab-header.active {
+  color: #326bf6;
+  border-bottom: 3px solid #326bf6;
+}
+
+/* Header */
+.terms-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.terms-header h1 {
+  font-size: 32px;
+  color: black;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Section Titles and Text */
+
+.terms-header p {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+/* New Classes for Styling */
+
+/* General text styling */
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #333;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+/* Section header styling */
+.section-header {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  margin-top: 30px;
+  margin-left: 50px;
+}

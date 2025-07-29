@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #2f2785;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-clip: border-box;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 1.5rem;
+  font-family: "Montserrat";
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+  padding: 1rem 0.8rem;
+}
+
+.logo-section-sidebar {
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.S-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.brand-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: fill;
+  display: block;
+}
+
+.S-sidebar-brand-collapsed {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.brand-logo-collapsed {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -10px;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    #326bf6 9%,
+    #90caf9 21%,
+    #90caf9 42%,
+    #a3a8f9 58%,
+    #c2aefd 76%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-subtitle {
+  font-size: 8px;
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    #326bf6 9%,
+    #90caf9 21%,
+    #90caf9 42%,
+    #a3a8f9 58%,
+    #c2aefd 76%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+  padding: 0;
+}
+
+.S-sidebar-nav {
+  flex-grow: 1;
+}
+
+.S-sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.S-sidebar-nav li a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar.collapsed .S-sidebar-nav li a {
+  padding: 0.75rem;
+  justify-content: center;
+}
+
+.S-sidebar-nav li a:hover,
+.S-sidebar-nav li.active a {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.sidebar.collapsed .S-sidebar-nav li.active a {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.S-sidebar-nav .icon {
+  margin-right: 0.75rem;
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.sidebar.collapsed .S-sidebar-nav .icon {
+  margin-right: 0;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collapse-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+}
+
+.collapse-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.collapse-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Adjust main content area when sidebar is collapsed */
+.sidebar.collapsed + .main-content-wrapper {
+  margin-left: 80px;
+}

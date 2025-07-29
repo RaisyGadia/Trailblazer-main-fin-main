@@ -1,0 +1,161 @@
+.oc-container {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+}
+
+.oc-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oc-background {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.oc-progress {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.oc-step-labels {
+  display: flex;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 34px);
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 60px;
+}
+
+.oc-step-circle {
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
+  border-radius: 50%;
+  background: #2f2785;
+  color: white;
+  font-family: "Montserrat";
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.oc-line {
+  width: clamp(50px, 10vw, 100px);
+  height: 3px;
+  background-color: #2f2785;
+  align-self: center;
+  margin: 0 -5px;
+  z-index: 1;
+}
+
+.oc-step-label {
+  font-family: "Montserrat";
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  width: clamp(80px, 12vw, 131px);
+  margin-top: 10px;
+}
+
+.oc-confirmed-message {
+  font-family: "Montserrat";
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.oc-checkmark {
+  width: clamp(100px, 15vw, 150px);
+  height: auto;
+  margin: 20px 0;
+}
+
+.oc-thank-you {
+  font-family: "Montserrat";
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.oc-dashboard-btn {
+  width: clamp(180px, 30vw, 225px);
+  height: clamp(45px, 8vh, 57px);
+  padding: 10px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Montserrat";
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: bold;
+  color: #2196f3;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.oc-dashboard-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for better responsiveness */
+@media screen and (max-width: 768px) {
+  .oc-container {
+    margin-top: 30px;
+  }
+  
+  .oc-progress {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .oc-container {
+    padding: 10px;
+  }
+  
+  .oc-confirmed-message {
+    margin: 15px 0;
+  }
+  
+  .oc-thank-you {
+    margin: 15px 0;
+  }
+  
+  .oc-dashboard-btn {
+    margin-top: 20px;
+  }
+}

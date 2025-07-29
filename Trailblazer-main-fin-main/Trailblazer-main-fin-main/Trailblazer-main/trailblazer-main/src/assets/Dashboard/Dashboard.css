@@ -1,0 +1,864 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+.dashboard-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  font-family: "Montserrat";
+  background: transparent;
+  overflow-x: hidden;
+  height: 100vh; 
+}
+
+.oh-container,
+.profile-container {
+  display: flex;
+  width: 100%;
+  font-family: "Montserrat";
+  background: transparent;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.main-content-wrapper {
+  flex: 1; 
+
+  flex-direction: column;
+  height: 100%; 
+  overflow-y: auto; 
+
+}
+
+.dashboard-container .main-content-wrapper {
+  margin-left: calc(300px + 1rem);
+  transition: margin-left 0.3s ease;
+}
+
+.dashboard-container .main-content-wrapper.sidebar-collapsed {
+  margin-left: calc(80px + 1rem);
+}
+
+.main-dashboard,
+.oh-main,
+.main-content {
+  flex: 1; 
+  overflow-y: auto; 
+  padding-top: 0px;
+  width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c2480;
+  text-align: left;
+  line-height: 0.8;
+}
+
+.date {
+  color: #2e9cf4;
+  font-size: 15px;
+  line-height: 0.8;
+}
+
+.D-user-profile-box {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  background-color: transparent;
+  position: relative;
+}
+
+.D-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.D-user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.name {
+  font-weight: 600;
+  color: #2c2480;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.welcome-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  width: 100%;
+  margin-top: 3rem; 
+  margin-bottom: 2rem;
+  position: relative; 
+  overflow: visible; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start;
+}
+
+.welcome-card > div {
+  flex-grow: 1; 
+  max-width: 65%; 
+  text-align: left;
+}
+
+.welcome-card h2 {
+  font-size: 48px;
+  color: #2f2785;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  line-height: 0.8;
+}
+
+.welcome-card p {
+  color: #4a4a6a;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 0;
+  line-height: 1;
+}
+
+.welcome-card-svg {
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  width: auto; 
+  height: 230px; 
+  z-index: 10;
+}
+
+.order-progress {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.order-progress h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #2f2785;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.order-progress p {
+  margin: 0;
+  color: #333;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.order-line {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.order-label {
+  font-weight: 600;
+  color: #2f2785;
+}
+
+.order-value {
+  font-weight: 600;
+  color: #2f2785;
+  margin-left: 10px;
+}
+
+.order-value1 {
+  font-weight: 600;
+  color: #2f2785;
+  margin-left: 20px;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(15px, 3vw, 30px); 
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 10px;
+}
+.line {
+  display: block;
+  width: calc(
+    clamp(15px, 3vw, 30px) + clamp(70px, 14vw, 120px)
+  ); 
+  height: clamp(12px, 2.5vw, 20px);
+  background-color: #2f2785;
+  align-self: center;
+  border-radius: 10px;
+  flex-shrink: 1;
+  margin-top: -2rem; 
+  margin-left: calc(
+    -1 * clamp(70px, 14vw, 120px) / 2
+  ); 
+  margin-right: calc(
+    -1 * clamp(70px, 14vw, 120px) / 2
+  );
+  z-index: 0; 
+}
+
+.step {
+  position: relative;
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 600;
+  color: #2f2785;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1; 
+  min-width: clamp(80px, 15vw, 120px);
+  max-width: 150px;
+  flex-shrink: 0;
+}
+
+.step p {
+  margin: 8px 0 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.icon-circle {
+  width: clamp(70px, 14vw, 120px); 
+  height: clamp(70px, 14vw, 120px); 
+  border-radius: 50%;
+  border: 3px solid #2f2785; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin: 0; 
+  position: relative;
+  z-index: 2; 
+}
+
+.step-img {
+  width: clamp(40px, 8vw, 70px); 
+  height: clamp(40px, 8vw, 70px); 
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.step.active .icon-circle {
+  background: #2f2785;
+}
+
+.step.active img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.step.active p {
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 600;
+  color: #2f2785;
+}
+
+
+@media (max-width: 992px) {
+  .progress-steps {
+    gap: 15px;
+    margin-top: 1.5rem;
+  }
+
+  .progress-steps::before {
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide the SVG on mobile screens */
+  .welcome-card-svg {
+    display: none;
+  }
+
+  /* Adjust welcome card for mobile */
+  .welcome-card {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .welcome-card > div {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .welcome-card h2 {
+    font-size: clamp(28px, 8vw, 40px);
+    margin-bottom: 15px;
+    line-height: 1.1;
+  }
+
+  .welcome-card p {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 1.3;
+  }
+
+  /* Reduce main content padding for mobile */
+  .main-dashboard {
+    padding: 0;
+  }
+
+  /* Auto-collapse sidebar adjustments for mobile */
+  .dashboard-container .main-content-wrapper {
+    margin-left: 80px; /* Always use collapsed margin on mobile */
+  }
+
+  .dashboard-container .main-content-wrapper.sidebar-collapsed {
+    margin-left: 80px;
+  }
+
+  /* Adjust page header for mobile */
+  .page-header {
+    width: calc(100% - 80px);
+    margin-left: -80px;
+    padding-left: calc(80px + 0.75rem);
+    padding-right: 0.75rem;
+  }
+
+  .page-header.sidebar-collapsed {
+    width: calc(100% - 80px);
+    margin-left: -80px;
+    padding-left: calc(80px + 0.75rem);
+  }
+
+  .order-progress h3 {
+    font-size: clamp(24px, 5vw, 36px);
+    text-align: center;
+  }
+
+  /* Improve order progress card-like appearance */
+  .order-progress {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  /* Better order info layout on mobile */
+  .order-info {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Convert progress steps to vertical layout */
+  .progress-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 4vw, 40px); /* Increased vertical gap */
+    padding: 0;
+  }
+
+  /* Change horizontal line to vertical line */
+  .line {
+    width: clamp(12px, 2.5vw, 20px);
+    height: calc(
+      clamp(20px, 4vw, 40px) + clamp(70px, 14vw, 120px)
+    ); /* Line height = gap + circle diameter */
+    margin-top: calc(
+      -1 * clamp(70px, 14vw, 100px) / 2
+    ); /* Negative margin for vertical overlap */
+    margin-bottom: calc(
+      -1 * clamp(70px, 14vw, 120px) / 2
+    ); /* Negative margin for vertical overlap */
+    margin-left: 0; /* Reset horizontal margin for vertical layout */
+    margin-right: 0; /* Reset horizontal margin for vertical layout */
+  }
+
+  .step {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    padding-left: 20%;
+  }
+
+  .step p {
+    margin: 0;
+    text-align: left;
+    font-size: clamp(16px, 3.5vw, 24px); /* Slightly larger text */
+  }
+
+  .icon-circle {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-card {
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .welcome-card h2 {
+    font-size: clamp(24px, 7vw, 32px);
+    margin-bottom: 10px;
+  }
+
+  .welcome-card p {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
+
+  .main-dashboard {
+    padding: 0;
+  }
+
+  .page-header {
+    padding-left: calc(80px + 0.5rem);
+    padding-right: 0.5rem;
+  }
+
+  .page-header.sidebar-collapsed {
+    padding-left: calc(80px + 0.5rem);
+  }
+
+  /* Adjust vertical progress steps for smaller screens */
+  .line {
+    width: 10px;
+    height: calc(
+      clamp(20px, 4vw, 40px) + clamp(60px, 12vw, 100px)
+    ); /* Adjusted height for smaller circle size */
+    margin-top: calc(-1 * clamp(60px, 12vw, 100px) / 2);
+    margin-bottom: calc(-1 * clamp(60px, 12vw, 100px) / 2);
+  }
+
+  .step {
+    padding-left: 10%;
+  }
+
+  .icon-circle {
+    width: clamp(60px, 12vw, 100px); /* Slightly smaller on mobile */
+    height: clamp(60px, 12vw, 100px);
+  }
+
+  .step-img {
+    width: clamp(35px, 7vw, 60px);
+    height: clamp(35px, 7vw, 60px);
+  }
+
+  .order-progress {
+    text-align: center;
+    margin-top: 0;
+    padding: 1.25rem 0.75rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .order-info {
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+  }
+
+  /* Better spacing for order information on mobile */
+  .order-line {
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .order-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive order labels and values */
+  .order-label {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .order-value,
+  .order-value1 {
+    font-size: 14px;
+    word-break: break-word;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .welcome-card {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .welcome-card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .welcome-card p {
+    font-size: 12px;
+  }
+
+  .main-dashboard {
+    padding: 0;
+  }
+
+  /* Adjust vertical progress steps for smallest screens */
+  .line {
+    width: 8px;
+    height: calc(
+      clamp(20px, 4vw, 40px) + clamp(50px, 10vw, 80px)
+    ); /* Adjusted height for smallest circle size */
+    margin-top: calc(-1 * clamp(50px, 10vw, 80px) / 2);
+    margin-bottom: calc(-1 * clamp(50px, 10vw, 80px) / 2);
+  }
+
+  .step {
+    padding-left: 5%;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .icon-circle {
+    width: clamp(50px, 10vw, 80px);
+    height: clamp(50px, 10vw, 80px);
+    border-width: 2px;
+  }
+
+  .step-img {
+    width: clamp(30px, 6vw, 50px);
+    height: clamp(30px, 6vw, 50px);
+  }
+
+  .step p {
+    font-size: 14px;
+  }
+
+  .step.active p {
+    font-size: 14px;
+  }
+
+  /* Ensure order-progress styles from 480px cascade, add specific margins */
+  .order-progress {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .order-progress h3 {
+    font-size: 20px;
+    margin-bottom: 0.75rem;
+  }
+
+  .order-info {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+  }
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+  margin-left: 25px;
+}
+.dropdown-icon-1 {
+  transition: transform 0.3s ease;
+  margin-left: 19px;
+}
+
+.D-dropdown-icon.rotate {
+  transform: rotate(180deg);
+  transform: scaleX(1.5);
+  color: #2f2785;
+}
+
+.D-dropdown-details {
+  color: white;
+  text-align: left;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.D-profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 0;
+  color: #2f2785;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.D-dropdown-header,
+.dropdown-header-clickable {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+  cursor: default;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2f2785;
+}
+
+.D-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid #2f2785;
+  object-fit: cover;
+}
+
+.D-user-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #2f2785;
+}
+
+.D-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  color: #2f2785;
+  text-decoration: none;
+}
+
+.D-dropdown-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  font-size: 12px;
+  color: #2f2785;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.D-footer-link {
+  color: #2f2785;
+  text-decoration: none;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.D-footer-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.D-profile-dropdown .name1 {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Shared Page Header Styles */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  width: calc(100% - 300px);
+  margin-left: -300px;
+  padding-left: calc(300px + 2rem);
+  transition: width 0.3s ease, margin-left 0.3s ease, padding-left 0.3s ease;
+}
+
+.page-header.sidebar-collapsed {
+  width: calc(100% - 80px);
+  margin-left: -80px;
+  padding-left: calc(80px + 2rem);
+}
+
+.page-header-title h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c2480;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Adjustments for user profile box within the new header */
+.page-header .D-user-profile-box,
+.page-header .oh-user-profile-box {
+  margin-top: 0; /* Remove top margin if any */
+}
+
+/* Remove negative margins from titles that were specific to old layout */
+.oh-title,
+.Pp-title {
+  margin-left: 0 !important; /* Titles are now part of .page-header-title, reset old margins */
+}
+
+/* Ensure main content area has top padding if header is sticky and has fixed height */
+.main-dashboard,
+.main-content, /* For ProfilePage */
+.oh-main {
+  flex: 1; /* Allows content to fill space below header */
+  overflow-y: auto; /* Enable scrolling for the content area itself */
+  width: 100%;
+  padding-top: 3rem; /* Adjusted from 5rem, and padding-top: 0px is removed from earlier block */
+  padding-bottom: 2rem; /* Original */
+  padding-left: 4rem; /* Adjusted from 10rem */
+  padding-right: 10rem; /* Original, for SVG */
+
+  /* If page-header has a fixed height (e.g., 70px) and is sticky, add top padding to content */
+  /* For example: padding-top: calc(70px + 2rem); */
+  /* For now, relying on sticky behavior; adjust if overlap occurs or fixed header height is set */
+}
+
+/* Cleanup old header styles */
+.dashboard-header,
+.oh-header-bar,
+.profile-header-wrapper {
+  /* This class was in ProfilePage.jsx */
+  /* These styles are largely superseded by .page-header */
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: none;
+  position: static; /* Reset positioning */
+  width: auto;
+  margin-left: 0;
+  padding-left: 0;
+  box-shadow: none; /* Remove old shadows if any */
+}
+
+/* Fix for first and last step vertical line */
+@media (max-width: 768px) {
+  .progress-steps {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* First step */
+  .step:first-child {
+    margin-top: 0;
+  }
+
+  /* Last step */
+  .step:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Minimal styling for order navigation arrows */
+.order-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.order-nav button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #2f2785;
+  font-weight: bold;
+}
+
+.order-nav button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
